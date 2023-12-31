@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+// importing the sytlesheet and the navbar and login components 
+import './App.css'
+import Navigation from "./components/Navigation";
+import LoginForm from "./components/LoginForm";
 
-function App() {
+export default function App() {
+  // JSX structured app that is styled with a bootstrap grid with two rows and columns that renders the component 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="row">
+        <div className="col">
+          <Navigation />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <LoginForm />
+        </div>
+      </div>
     </div>
   );
 }
-
-export default App;
